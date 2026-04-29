@@ -1,0 +1,26 @@
+# template to propagate stop, pause, move, go
+
+# [ 0] Stop
+# [ 1] Pause
+# [ 2] Move
+# [ 3] Go
+
+record(mbbo, "TS02K-MO-SERVC-01:DEFER") {
+  field(ZRVL, "0")
+  field(ONVL, "1")
+  field(TWVL, "2")
+  field(THVL, "3")
+  field(ZRST, "Stop")
+  field(ONST, "Pause")
+  field(TWST, "Move")
+  field(THST, "Go")
+  field(OUT, "TS02K-MO-SERVC-01:MDFAN PP")
+}
+
+record(dfanout, "TS02K-MO-SERVC-01:MDFAN") {
+  field(OUTA, "TS02K-MO-SERVO-01:MOT.SPMG")
+  field(OUTB, "TS02K-MO-SERVO-02:MOT.SPMG")
+  field(OUTC, "TS02K-MO-SERVO-03:MOT.SPMG")
+  field(OUTD, "TS02K-MO-SERVO-04:MOT.SPMG")
+}
+

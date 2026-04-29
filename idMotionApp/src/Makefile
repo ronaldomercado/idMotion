@@ -26,7 +26,7 @@ include $(TOP)/configure/CONFIG
 # Build an IOC Application
 # ------------------------
 
-PROD_IOC = idMotion
+#PROD_IOC = idMotion
 
 # idMotion.dbd will be installed into <top>/dbd
 DBD += idMotion.dbd

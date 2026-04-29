@@ -1,0 +1,11 @@
+# % macro, __doc__, template to create a gui element for 4 axis devices
+#
+# Macros:
+# % macro, name, name for gui element
+# % macro, idname, name for gui screen (do not include spaces)
+# % macro, server, linux server to use to bridge through to for pmac control
+# % macro, pmac, name of pmac controller
+# % macro, dom, first part of prefix, used to build gui macros
+# % macro, suff1, always zero - c.f. jira ID-739
+
+# % gui, $(name), edm, IDM_Top.edl, prefix=$(dom)-MO-,prefixb=$(dom)-MO-,dom=$(dom),suff1=$(suff1),idname=$(idname),server=$(server),pmac=$(pmac)
