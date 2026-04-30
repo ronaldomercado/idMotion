@@ -1,0 +1,44 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 602
+y 284
+w 500
+h 600
+font "arial-medium-r-18.0"
+ctlFont "arial-medium-r-18.0"
+btnFont "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 0
+ctlBgColor1 index 0
+ctlBgColor2 index 14
+topShadowColor index 0
+botShadowColor index 14
+endScreenProperties
+
+# (Choice Button)
+object activeChoiceButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 87
+y 88
+w 278
+h 171
+fgColor index 14
+bgColor index 3
+selectColor index 0
+inconsistentColor index 14
+topShadowColor index 0
+botShadowColor index 14
+controlPv "TS02K-MO-SERVC-01:DEFER"
+indicatorPv "TS02K-MO-SERVC-01:DEFER"
+font "arial-medium-r-18.0"
+endObjectProperties
+

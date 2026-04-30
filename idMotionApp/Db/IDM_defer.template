@@ -4,6 +4,7 @@
 # [ 1] Pause
 # [ 2] Move
 # [ 3] Go
+# % gui, $(name), edm, IDM_defer.edl
 
 record(mbbo, "TS02K-MO-SERVC-01:DEFER") {
   field(ZRVL, "0")
