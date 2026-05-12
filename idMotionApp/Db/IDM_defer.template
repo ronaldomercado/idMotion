@@ -5,8 +5,9 @@
 # [ 2] Move
 # [ 3] Go
 # % gui, $(name), edm, IDM_defer.edl
+# % macro, prefix, pv prefix e.g. TS02K-MO-
 
-record(mbbo, "TS02K-MO-SERVC-01:DEFER") {
+record(mbbo, "$(prefix)SERVC-01:DEFER") {
   field(ZRVL, "0")
   field(ONVL, "1")
   field(TWVL, "2")
@@ -15,13 +16,13 @@ record(mbbo, "TS02K-MO-SERVC-01:DEFER") {
   field(ONST, "Pause")
   field(TWST, "Move")
   field(THST, "Go")
-  field(OUT, "TS02K-MO-SERVC-01:MDFAN PP")
+  field(OUT, "$(prefix)SERVC-01:MDFAN PP")
 }
 
-record(dfanout, "TS02K-MO-SERVC-01:MDFAN") {
-  field(OUTA, "TS02K-MO-SERVO-01:MOT.SPMG")
-  field(OUTB, "TS02K-MO-SERVO-02:MOT.SPMG")
-  field(OUTC, "TS02K-MO-SERVO-03:MOT.SPMG")
-  field(OUTD, "TS02K-MO-SERVO-04:MOT.SPMG")
+record(dfanout, "$(prefix)SERVC-01:MDFAN") {
+  field(OUTA, "$(prefix)SERVO-01:MOT.SPMG")
+  field(OUTB, "$(prefix)SERVO-02:MOT.SPMG")
+  field(OUTC, "$(prefix)SERVO-03:MOT.SPMG")
+  field(OUTD, "$(prefix)SERVO-04:MOT.SPMG")
 }
 

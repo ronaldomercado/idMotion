@@ -7,3 +7,6 @@ class idmGui(AutoSubstitution):
 
 class idmDefer(AutoSubstitution):
     TemplateFile = 'IDM_defer.template'
+
+class idmEncSync(AutoSubstitution):
+    TemplateFile = 'IDM_encSync.template'

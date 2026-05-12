@@ -1,0 +1,17 @@
+# Records to reset encoders after encoder power cycle
+# % macro, prefix, record prefix
+#                  e.g. "TS02K-MO-PMAC-01"          
+# % macro, port, powerbrick asyn port from pmacCreateController invocation
+#               e.g. "pwbrick"
+# % macro, name, gui element
+
+# % gui, $(name), edmembed, IDM_encSync.edl, prefix=$(prefix)
+
+record(stringout, "$(prefix):ENC_SYNC")
+{
+    field(DESC, "Re-read abs encoders")
+    field(DTYP, "asynOctetWrite")
+    field(OUT,  "@asyn($(port),0,1)PMAC_C_WRITE_CMD")
+    field(SCAN, "Passive")
+    field(VAL,  "enable plc 3")
+}

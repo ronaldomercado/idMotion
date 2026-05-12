@@ -13,6 +13,7 @@ include $(TOP)/configure/CONFIG
 #
 DB += IDM_defer.template
 DB += IDM_gui.template
+DB += IDM_encSync.template
 
 #----------------------------------------------------
 # In a Diamond IOC Application, build db files from
