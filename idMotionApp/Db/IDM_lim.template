@@ -1,0 +1,22 @@
+# % macro, __doc__, template to create limit indicator records
+#                   for one axis
+# % macro, prefix, pv prefix, e.g. SR02J-MO-
+# % macro, axx, axis number e.g. 01, 02, etc
+
+#% archiver 10 Monitor
+record(calc, "$(prefix)SERVO-$(axx):HLSW") {
+  field(SCAN, ".2 second")
+  field(DESC, "Axis $(axx) - High Limit Switch")
+  field(CALC, "!(A & 4)")
+  field(INPA, "$(prefix)SERVO-$(axx):MOT.MSTA PP NMS")
+  field(FLNK, "$(prefix)SERVO-$(axx):LLSW.PROC")
+}
+
+#% archiver 10 Monitor
+record(calc, "$(prefix)SERVO-$(axx):LLSW") {
+  field(SCAN, "Passive")
+  field(DESC, "Axis $(axx) - Low Limit Switch")
+  field(CALC, "!(A & 8192)")
+  field(INPA, "$(prefix)SERVO-$(axx):MOT.MSTA PP NMS")
+}
+

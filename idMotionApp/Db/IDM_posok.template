@@ -1,0 +1,17 @@
+# % macro, __doc__, template to create posok records
+# % macro, prefix, pv prefix, e.g. SR02J-MO-
+# % macro, axx, axis number e.g. 01, 02, etc
+#% archiver 1 Monitor
+record(calc, "$(prefix)SERVO-$(axx):POSOK") {
+  #field(DESC, "compare if MOT/ENCD disagree then set output 0")
+  field(SCAN, "Passive")
+  field(VAL, "1")
+  field(CALC, "((C&&D)?ABS(A-B) <= 0.0750):1")
+  field(INPA, "$(prefix)SERVO-$(axx):MOT.RBV")
+  field(INPB, "$(prefix)AXIS-$(axx):ENCD")
+  field(INPC, "$(prefix)SERVO-$(axx):MOT.CNEN")
+  field(INPD, "1")
+  field(LOW, "0.5")
+  field(LSV, "MAJOR")
+  field(HYST, "0")
+}

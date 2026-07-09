@@ -10,3 +10,12 @@ class idmDefer(AutoSubstitution):
 
 class idmEncSync(AutoSubstitution):
     TemplateFile = 'IDM_encSync.template'
+
+class idmGap(AutoSubstitution):
+    TemplateFile = 'IDM_gap.template'
+
+class idmLim(AutoSubstitution):
+    TemplateFile = 'IDM_lim.template'
+
+class idmPosok(AutoSubstitution):
+    TemplateFile = 'IDM_posok.template'
