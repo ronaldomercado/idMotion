@@ -5,6 +5,7 @@ DB += IDM_gui.template
 DB += IDM_encSync.template
 DB += IDM_lim.template
 DB += IDM_gap.template
+DB += IDM_single.template
 DB += IDM_posok.template
 DB += IDM_stop.template
 

@@ -1,0 +1,51 @@
+# % macro, __doc__, Template to define single axis demand PVs
+# % macro, prefix, pv prefix e.g. TS02K-MO-
+
+record(ai, "$(prefix)SERVO-01:1AXISD")
+{
+  field(DESC, "Demand axis 1")
+  field(PREC, "4")
+}
+
+record(ai, "$(prefix)SERVO-02:1AXISD")
+{
+  field(DESC, "Demand axis 2")
+  field(PREC, "4")
+}
+
+record(ai, "$(prefix)SERVO-03:1AXISD")
+{
+  field(DESC, "Demand axis 3")
+  field(PREC, "4")
+}
+
+record(ai, "$(prefix)SERVO-04:1AXISD")
+{
+  field(DESC, "Demand axis 4")
+  field(PREC, "4")
+}
+
+record(seq, "$(prefix)SERVC-01:1AXIS")
+{
+  field(DESC, "Single axis set")
+  field(SCAN, "Passive")
+  field(DLY1, "0.0")
+  field(DO1, "0") # stop
+  field(LNK1, "$(prefix)SERVC-01:DEFER PP")
+  field(DLY2, "0")
+  field(DOL2, "$(prefix)SERVO-01:1AXISD")
+  field(LNK2, "$(prefix)SERVO-01:MOT PP")
+  field(DLY3, "0")
+  field(DOL3, "$(prefix)SERVO-02:1AXISD")
+  field(LNK3, "$(prefix)SERVO-02:MOT PP")
+  field(DLY4, "0")
+  field(DOL4, "$(prefix)SERVO-03:1AXISD")
+  field(LNK4, "$(prefix)SERVO-03:MOT PP")
+  field(DLY5, "0")
+  field(DOL5, "$(prefix)SERVO-04:1AXISD")
+  field(LNK5, "$(prefix)SERVO-04:MOT PP")
+  field(DLY6, "0.2")
+  field(DO6, "3") # go
+  field(LNK6, "$(prefix)SERVC-01:DEFER PP")
+}
+

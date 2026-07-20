@@ -1,0 +1,2085 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 176
+y 72
+w 810
+h 530
+font "arial-medium-r-14.0"
+ctlFont "arial-bold-r-14.0"
+btnFont "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 25
+ctlFgColor2 index 0
+ctlBgColor1 index 3
+ctlBgColor2 index 14
+topShadowColor index 1
+botShadowColor index 11
+title "Device - servo"
+showGrid
+snapToGrid
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 1
+y 3
+w 805
+h 25
+lineColor index 11
+fillColor index 0
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 1
+y 3
+w 805
+h 24
+fgColor index 14
+bgColor index 3
+topShadowColor index 0
+botShadowColor index 0
+font "arial-bold-r-14.0"
+xPosOffset 5
+yPosOffset 5
+button3Popup
+invisible
+buttonLabel "tooltip"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "generic-tooltip"
+}
+setPosition {
+  0 "button"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 1
+y 3
+w 805
+h 25
+font "arial-bold-r-16.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 61
+value {
+  "Four axis Top ($(prefix))"
+}
+endObjectProperties
+
+# (PNG Image)
+object activePngClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 200
+y 40
+w 401
+h 462
+file "cpmu6-structure.png"
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 10
+y 40
+w 189
+h 109
+fgColor index 0
+bgColor index 0
+topShadowColor index 0
+botShadowColor index 0
+font "helvetica-medium-r-14.0"
+xPosOffset -100
+yPosOffset -100
+button3Popup
+invisible
+buttonLabel "HELP"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "motor-embed-small-tooltip"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "box-label=Top D/S,motor=$(prefix)SERVO-01:MOT"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 45
+w 189
+h 104
+lineColor index 14
+fill
+fillColor index 5
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 143
+y 123
+w 52
+h 22
+fgColor index 21
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-01:MOT.STOP"
+pressValue "1"
+onLabel "STOP"
+offLabel "STOP"
+3d
+font "arial-bold-r-14.0"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 18
+y 96
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 5
+minValues {
+  0 3
+  2 1
+  3 2
+}
+maxValues {
+  0 4
+  2 2
+  3 3
+  4 1
+}
+controlPvs {
+  0 "$(prefix)SERVO-01:MOT.SEVR"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 172
+y 96
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 6
+minValues {
+  4 1
+}
+maxValues {
+  4 2
+  5 1
+}
+controlPvs {
+  0 "$(prefix)SERVO-01:MOT.DMOV"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 15
+y 123
+w 52
+h 22
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-14.0"
+buttonLabel "More"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "motor.edl"
+}
+symbols {
+  0 "motor=$(prefix)SERVO-01:MOT"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 40
+w 57
+h 13
+font "arial-medium-r-12.0"
+fgColor index 14
+bgColor index 8
+value {
+  "  Top D/S  "
+}
+autoSize
+border
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 75
+y 125
+w 60
+h 16
+controlPv "$(prefix)SERVO-01:MOT.TWV"
+font "arial-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+editable
+autoHeight
+limitsFromDb
+nullColor index 30
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 15
+y 61
+w 43
+h 29
+fgColor index 25
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-01:MOT.TWR"
+pressValue "1"
+onLabel "-"
+offLabel "-"
+3d
+font "arial-bold-r-24.0"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 63
+y 59
+w 83
+h 33
+controlPv "$(prefix)SERVO-01:MOT"
+displayMode "decimal"
+precision 4
+fgColor index 25
+bgColor index 3
+font "arial-bold-r-14.0"
+fontAlign "center"
+lineWidth -2
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 151
+y 61
+w 43
+h 29
+fgColor index 25
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-01:MOT.TWF"
+pressValue "1"
+onLabel "+"
+offLabel "+"
+3d
+font "arial-bold-r-16.0"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 151
+y 46
+w 43
+h 13
+fgColor index 25
+bgColor index 3
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-01:MOT.SPMG"
+indicatorPv "$(prefix)SERVO-01:MOT.SPMG"
+font "helvetica-medium-r-8.0"
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 48
+y 97
+w 115
+h 20
+controlPv "$(prefix)SERVO-01:MOT.RBV"
+fgColor index 15
+fgAlarm
+bgColor index 10
+fill
+font "arial-bold-r-14.0"
+fontAlign "center"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 131
+y 46
+w 18
+h 11
+
+beginGroup
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 131
+y 46
+w 18
+h 13
+fgColor index 22
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-01:MOT:KILL.PROC"
+pressValue "1"
+onLabel "Kill"
+offLabel "Kill"
+3d
+font "helvetica-medium-r-8.0"
+endObjectProperties
+
+endGroup
+
+visPv "$(prefix)SERVO-01:MOT:KILL"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 168
+y 96
+w 28
+h 21
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 168
+y 96
+w 28
+h 21
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 21
+value {
+  "ALoss"
+}
+endObjectProperties
+
+endGroup
+
+visPv "CALC\\\{A&2\}($(prefix)SERVO-01:MOT:ELOSS)"
+visMin "2"
+visMax "3"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 168
+y 96
+w 28
+h 21
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 168
+y 96
+w 28
+h 21
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 21
+value {
+  "SFail"
+}
+endObjectProperties
+
+endGroup
+
+visPv "CALC\\\{A&4\}($(prefix)SERVO-01:MOT:ELOSS)"
+visMin "4"
+visMax "5"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 168
+y 96
+w 28
+h 21
+
+beginGroup
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 168
+y 96
+w 28
+h 21
+fgColor index 14
+onColor index 21
+offColor index 20
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-01:MOT:ELOSSRC.A"
+pressValue "0"
+onLabel "ELoss"
+offLabel "Eloss"
+3d
+font "helvetica-medium-r-8.0"
+endObjectProperties
+
+endGroup
+
+visPv "CALC\\\{A&1\}($(prefix)SERVO-01:MOT:ELOSS)"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 10
+y 382
+w 189
+h 109
+fgColor index 0
+bgColor index 0
+topShadowColor index 0
+botShadowColor index 0
+font "helvetica-medium-r-14.0"
+xPosOffset -100
+yPosOffset -100
+button3Popup
+invisible
+buttonLabel "HELP"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "motor-embed-small-tooltip"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "box-label=Bottom D/S,motor=$(prefix)SERVO-03:MOT"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 392
+w 189
+h 104
+lineColor index 14
+fill
+fillColor index 5
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 140
+y 462
+w 52
+h 22
+fgColor index 21
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-03:MOT.STOP"
+pressValue "1"
+onLabel "STOP"
+offLabel "STOP"
+3d
+font "arial-bold-r-14.0"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 442
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 5
+minValues {
+  0 3
+  2 1
+  3 2
+}
+maxValues {
+  0 4
+  2 2
+  3 3
+  4 1
+}
+controlPvs {
+  0 "$(prefix)SERVO-03:MOT.SEVR"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 170
+y 442
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 6
+minValues {
+  4 1
+}
+maxValues {
+  4 2
+  5 1
+}
+controlPvs {
+  0 "$(prefix)SERVO-03:MOT.DMOV"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 10
+y 462
+w 52
+h 22
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-14.0"
+buttonLabel "More"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "motor.edl"
+}
+symbols {
+  0 "motor=$(prefix)SERVO-03:MOT"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 382
+w 76
+h 13
+font "arial-medium-r-12.0"
+fgColor index 14
+bgColor index 8
+value {
+  "  Bottom D/S  "
+}
+autoSize
+border
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 70
+y 472
+w 60
+h 16
+controlPv "$(prefix)SERVO-03:MOT.TWV"
+font "arial-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+editable
+autoHeight
+limitsFromDb
+nullColor index 30
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 10
+y 402
+w 43
+h 29
+fgColor index 25
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-03:MOT.TWR"
+pressValue "1"
+onLabel "-"
+offLabel "-"
+3d
+font "arial-bold-r-24.0"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 60
+y 402
+w 83
+h 33
+controlPv "$(prefix)SERVO-03:MOT"
+displayMode "decimal"
+precision 4
+fgColor index 25
+bgColor index 3
+font "arial-bold-r-14.0"
+fontAlign "center"
+lineWidth -2
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 150
+y 402
+w 43
+h 29
+fgColor index 25
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-03:MOT.TWF"
+pressValue "1"
+onLabel "+"
+offLabel "+"
+3d
+font "arial-bold-r-16.0"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 150
+y 392
+w 43
+h 13
+fgColor index 25
+bgColor index 3
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-03:MOT.SPMG"
+indicatorPv "$(prefix)SERVO-03:MOT.SPMG"
+font "helvetica-medium-r-8.0"
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 40
+y 442
+w 115
+h 20
+controlPv "$(prefix)SERVO-03:MOT.RBV"
+fgColor index 15
+fgAlarm
+bgColor index 10
+fill
+font "arial-bold-r-14.0"
+fontAlign "center"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 130
+y 392
+w 18
+h 11
+
+beginGroup
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 126
+y 388
+w 18
+h 13
+fgColor index 22
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-03:MOT:KILL.PROC"
+pressValue "1"
+onLabel "Kill"
+offLabel "Kill"
+3d
+font "helvetica-medium-r-8.0"
+endObjectProperties
+
+endGroup
+
+visPv "$(prefix)SERVO-03:MOT:KILL"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 160
+y 442
+w 28
+h 21
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 163
+y 438
+w 28
+h 21
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 21
+value {
+  "ALoss"
+}
+endObjectProperties
+
+endGroup
+
+visPv "CALC\\\{A&2\}($(prefix)SERVO-03:MOT:ELOSS)"
+visMin "2"
+visMax "3"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 160
+y 442
+w 28
+h 21
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 163
+y 438
+w 28
+h 21
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 21
+value {
+  "SFail"
+}
+endObjectProperties
+
+endGroup
+
+visPv "CALC\\\{A&4\}($(prefix)SERVO-03:MOT:ELOSS)"
+visMin "4"
+visMax "5"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 160
+y 442
+w 28
+h 21
+
+beginGroup
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 163
+y 438
+w 28
+h 21
+fgColor index 14
+onColor index 21
+offColor index 20
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-03:MOT:ELOSSRC.A"
+pressValue "0"
+onLabel "ELoss"
+offLabel "Eloss"
+3d
+font "helvetica-medium-r-8.0"
+endObjectProperties
+
+endGroup
+
+visPv "CALC\\\{A&1\}($(prefix)SERVO-03:MOT:ELOSS)"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 610
+y 382
+w 189
+h 142
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 610
+y 382
+w 189
+h 109
+fgColor index 0
+bgColor index 0
+topShadowColor index 0
+botShadowColor index 0
+font "helvetica-medium-r-14.0"
+xPosOffset -100
+yPosOffset -100
+button3Popup
+invisible
+buttonLabel "HELP"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "motor-embed-small-tooltip"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "box-label=Bottom U/S,motor=$(prefix)SERVO-04:MOT"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 610
+y 392
+w 189
+h 104
+lineColor index 14
+fill
+fillColor index 5
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 740
+y 462
+w 52
+h 22
+fgColor index 21
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-04:MOT.STOP"
+pressValue "1"
+onLabel "STOP"
+offLabel "STOP"
+3d
+font "arial-bold-r-14.0"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 610
+y 442
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 5
+minValues {
+  0 3
+  2 1
+  3 2
+}
+maxValues {
+  0 4
+  2 2
+  3 3
+  4 1
+}
+controlPvs {
+  0 "$(prefix)SERVO-04:MOT.SEVR"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 442
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 6
+minValues {
+  4 1
+}
+maxValues {
+  4 2
+  5 1
+}
+controlPvs {
+  0 "$(prefix)SERVO-04:MOT.DMOV"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 610
+y 462
+w 52
+h 22
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-14.0"
+buttonLabel "More"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "motor.edl"
+}
+symbols {
+  0 "motor=$(prefix)SERVO-04:MOT"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 610
+y 382
+w 76
+h 13
+font "arial-medium-r-12.0"
+fgColor index 14
+bgColor index 8
+value {
+  "  Bottom U/S  "
+}
+autoSize
+border
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 670
+y 472
+w 60
+h 16
+controlPv "$(prefix)SERVO-04:MOT.TWV"
+font "arial-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+editable
+autoHeight
+limitsFromDb
+nullColor index 30
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 610
+y 402
+w 43
+h 29
+fgColor index 25
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-04:MOT.TWR"
+pressValue "1"
+onLabel "-"
+offLabel "-"
+3d
+font "arial-bold-r-24.0"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 660
+y 402
+w 83
+h 33
+controlPv "$(prefix)SERVO-04:MOT"
+displayMode "decimal"
+precision 4
+fgColor index 25
+bgColor index 3
+font "arial-bold-r-14.0"
+fontAlign "center"
+lineWidth -2
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 750
+y 402
+w 43
+h 29
+fgColor index 25
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-04:MOT.TWF"
+pressValue "1"
+onLabel "+"
+offLabel "+"
+3d
+font "arial-bold-r-16.0"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 750
+y 392
+w 43
+h 13
+fgColor index 25
+bgColor index 3
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-04:MOT.SPMG"
+indicatorPv "$(prefix)SERVO-04:MOT.SPMG"
+font "helvetica-medium-r-8.0"
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 640
+y 442
+w 115
+h 20
+controlPv "$(prefix)SERVO-04:MOT.RBV"
+fgColor index 15
+fgAlarm
+bgColor index 10
+fill
+font "arial-bold-r-14.0"
+fontAlign "center"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 730
+y 392
+w 18
+h 11
+
+beginGroup
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 726
+y 388
+w 18
+h 13
+fgColor index 22
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-04:MOT:KILL.PROC"
+pressValue "1"
+onLabel "Kill"
+offLabel "Kill"
+3d
+font "helvetica-medium-r-8.0"
+endObjectProperties
+
+endGroup
+
+visPv "$(prefix)SERVO-04:MOT:KILL"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 760
+y 442
+w 28
+h 21
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 763
+y 438
+w 28
+h 21
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 21
+value {
+  "ALoss"
+}
+endObjectProperties
+
+endGroup
+
+visPv "CALC\\\{A&2\}($(prefix)SERVO-04:MOT:ELOSS)"
+visMin "2"
+visMax "3"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 760
+y 442
+w 28
+h 21
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 763
+y 438
+w 28
+h 21
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 21
+value {
+  "SFail"
+}
+endObjectProperties
+
+endGroup
+
+visPv "CALC\\\{A&4\}($(prefix)SERVO-04:MOT:ELOSS)"
+visMin "4"
+visMax "5"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 760
+y 442
+w 28
+h 21
+
+beginGroup
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 763
+y 438
+w 28
+h 21
+fgColor index 14
+onColor index 21
+offColor index 20
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-04:MOT:ELOSSRC.A"
+pressValue "0"
+onLabel "ELoss"
+offLabel "Eloss"
+3d
+font "helvetica-medium-r-8.0"
+endObjectProperties
+
+endGroup
+
+visPv "CALC\\\{A&1\}($(prefix)SERVO-04:MOT:ELOSS)"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 680
+y 504
+w 90
+h 20
+fgColor index 46
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+label "EXIT"
+font "arial-medium-r-16.0"
+3d
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 610
+y 40
+w 189
+h 114
+
+beginGroup
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 610
+y 40
+w 189
+h 109
+fgColor index 0
+bgColor index 0
+topShadowColor index 0
+botShadowColor index 0
+font "helvetica-medium-r-14.0"
+xPosOffset -100
+yPosOffset -100
+button3Popup
+invisible
+buttonLabel "HELP"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "motor-embed-small-tooltip"
+}
+setPosition {
+  0 "button"
+}
+symbols {
+  0 "box-label=Top U/S,motor=$(prefix)SERVO-02:MOT"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 610
+y 50
+w 189
+h 104
+lineColor index 14
+fill
+fillColor index 5
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 740
+y 120
+w 52
+h 22
+fgColor index 21
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-02:MOT.STOP"
+pressValue "1"
+onLabel "STOP"
+offLabel "STOP"
+3d
+font "arial-bold-r-14.0"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 620
+y 100
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 5
+minValues {
+  0 3
+  2 1
+  3 2
+}
+maxValues {
+  0 4
+  2 2
+  3 3
+  4 1
+}
+controlPvs {
+  0 "$(prefix)SERVO-02:MOT.SEVR"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Symbol)
+object activeSymbolClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 100
+w 20
+h 20
+file "symbols-traffic-light-symbol.edl"
+numStates 6
+minValues {
+  4 1
+}
+maxValues {
+  4 2
+  5 1
+}
+controlPvs {
+  0 "$(prefix)SERVO-02:MOT.DMOV"
+}
+numPvs 1
+useOriginalSize
+useOriginalColors
+fgColor index 14
+bgColor index 3
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 620
+y 120
+w 52
+h 22
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-14.0"
+buttonLabel "More"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "motor.edl"
+}
+symbols {
+  0 "motor=$(prefix)SERVO-02:MOT"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 610
+y 40
+w 57
+h 13
+font "arial-medium-r-12.0"
+fgColor index 14
+bgColor index 8
+value {
+  "  Top U/S  "
+}
+autoSize
+border
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 680
+y 130
+w 60
+h 16
+controlPv "$(prefix)SERVO-02:MOT.TWV"
+font "arial-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+editable
+autoHeight
+limitsFromDb
+nullColor index 30
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 620
+y 60
+w 43
+h 29
+fgColor index 25
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-02:MOT.TWR"
+pressValue "1"
+onLabel "-"
+offLabel "-"
+3d
+font "arial-bold-r-24.0"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 660
+y 60
+w 83
+h 33
+controlPv "$(prefix)SERVO-02:MOT"
+displayMode "decimal"
+precision 4
+fgColor index 25
+bgColor index 3
+font "arial-bold-r-14.0"
+fontAlign "center"
+lineWidth -2
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 750
+y 60
+w 43
+h 29
+fgColor index 25
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-02:MOT.TWF"
+pressValue "1"
+onLabel "+"
+offLabel "+"
+3d
+font "arial-bold-r-16.0"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 750
+y 50
+w 43
+h 13
+fgColor index 25
+bgColor index 3
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-02:MOT.SPMG"
+indicatorPv "$(prefix)SERVO-02:MOT.SPMG"
+font "helvetica-medium-r-8.0"
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 650
+y 100
+w 115
+h 20
+controlPv "$(prefix)SERVO-02:MOT.RBV"
+fgColor index 15
+fgAlarm
+bgColor index 10
+fill
+font "arial-bold-r-14.0"
+fontAlign "center"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 730
+y 50
+w 18
+h 11
+
+beginGroup
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 731
+y 46
+w 18
+h 13
+fgColor index 22
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-02:MOT:KILL.PROC"
+pressValue "1"
+onLabel "Kill"
+offLabel "Kill"
+3d
+font "helvetica-medium-r-8.0"
+endObjectProperties
+
+endGroup
+
+visPv "$(prefix)SERVO-02:MOT:KILL"
+visMin "0"
+visMax "1"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 100
+w 28
+h 21
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 768
+y 96
+w 28
+h 21
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 21
+value {
+  "ALoss"
+}
+endObjectProperties
+
+endGroup
+
+visPv "CALC\\\{A&2\}($(prefix)SERVO-02:MOT:ELOSS)"
+visMin "2"
+visMax "3"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 100
+w 28
+h 21
+
+beginGroup
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 768
+y 96
+w 28
+h 21
+font "helvetica-medium-r-10.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 21
+value {
+  "SFail"
+}
+endObjectProperties
+
+endGroup
+
+visPv "CALC\\\{A&4\}($(prefix)SERVO-02:MOT:ELOSS)"
+visMin "4"
+visMax "5"
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 770
+y 100
+w 28
+h 21
+
+beginGroup
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 768
+y 96
+w 28
+h 21
+fgColor index 14
+onColor index 21
+offColor index 20
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVO-02:MOT:ELOSSRC.A"
+pressValue "0"
+onLabel "ELoss"
+offLabel "Eloss"
+3d
+font "helvetica-medium-r-8.0"
+endObjectProperties
+
+endGroup
+
+visPv "CALC\\\{A&1\}($(prefix)SERVO-02:MOT:ELOSS)"
+visMin "1"
+visMax "2"
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 2
+w 805
+h 25
+lineColor index 1
+fillColor index 0
+endObjectProperties
+

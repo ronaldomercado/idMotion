@@ -1,0 +1,483 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 410
+y 143
+w 520
+h 366
+font "arial-medium-r-12.0"
+ctlFont "arial-medium-r-12.0"
+btnFont "arial-medium-r-12.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 14
+ctlBgColor1 index 3
+ctlBgColor2 index 3
+topShadowColor index 1
+botShadowColor index 11
+showGrid
+snapToGrid
+gridSize 8
+endScreenProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 0
+y 0
+w 520
+h 40
+font "arial-bold-r-16.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 63
+value {
+  "DLS ID Engineering Moves    ($(prefix))"
+  "ID   $(idname) "
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 8
+y 48
+w 504
+h 280
+lineColor index 14
+fill
+fillColor index 5
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 16
+y 88
+w 160
+h 192
+lineColor index 14
+fillColor index 3
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 176
+y 88
+w 160
+h 192
+lineColor index 14
+fillColor index 3
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 112
+y 832
+w 71
+h 16
+font "arial-medium-r-14.0"
+fgColor index 20
+bgColor index 0
+visPv "$(prefix)SERVO-$(suff1)1:MOT.DISA"
+visMin "1"
+visMax "2"
+value {
+  "DISABLED"
+}
+endObjectProperties
+
+# (Exit Button)
+object activeExitButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 416
+y 336
+w 96
+h 24
+fgColor index 46
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+label "Exit"
+font "arial-medium-r-14.0"
+3d
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 664
+y 1104
+w 248
+h 552
+lineColor index 14
+fill
+fillColor index 3
+endObjectProperties
+
+# (Message Button)
+object activeMessageButtonClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 320
+y 288
+w 176
+h 32
+fgColor index 25
+onColor index 4
+offColor index 3
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(prefix)SERVC-$(suff1)1:1AXIS.PROC"
+pressValue "0"
+releaseValue "0"
+onLabel "Single Axis Move Started..Start Single Axis Move"
+offLabel "Start Single Axis Move"
+3d
+font "arial-medium-r-14.0"
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 24
+y 152
+w 144
+h 40
+controlPv "$(prefix)SERVO-02:1AXISD"
+precision 4
+fgColor index 14
+bgColor index 3
+fill
+font "arial-medium-r-14.0"
+lineWidth 1
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 24
+y 112
+w 144
+h 40
+controlPv "$(prefix)SERVO-01:1AXISD"
+precision 4
+fgColor index 14
+bgColor index 3
+fill
+font "arial-medium-r-14.0"
+lineWidth 1
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 344
+y 120
+w 144
+h 24
+controlPv "$(prefix)SERVO-$(suff1)1:MOT.RBV"
+precision 4
+fgColor index 16
+fgAlarm
+bgColor index 13
+fill
+font "arial-medium-r-14.0"
+fontAlign "center"
+lineWidth 2
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 344
+y 160
+w 144
+h 24
+controlPv "$(prefix)SERVO-$(suff1)2:MOT.RBV"
+precision 4
+fgColor index 16
+fgAlarm
+bgColor index 13
+fill
+font "arial-medium-r-14.0"
+fontAlign "center"
+lineWidth 2
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 184
+y 120
+w 144
+h 24
+controlPv "$(prefix)SERVO-01:1AXISD"
+precision 4
+fgColor index 16
+fgAlarm
+bgColor index 13
+fill
+font "arial-medium-r-14.0"
+fontAlign "center"
+lineWidth 2
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 184
+y 160
+w 144
+h 24
+controlPv "$(prefix)SERVO-02:1AXISD"
+precision 4
+fgColor index 16
+fgAlarm
+bgColor index 13
+fill
+font "arial-medium-r-14.0"
+fontAlign "center"
+lineWidth 2
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 24
+y 96
+w 144
+h 16
+font "arial-medium-r-12.0"
+fontAlign "center"
+fgColor index 1
+bgColor index 8
+value {
+  "User Input"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 336
+y 88
+w 160
+h 192
+lineColor index 14
+fillColor index 3
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 184
+y 96
+w 144
+h 16
+font "arial-medium-r-12.0"
+fontAlign "center"
+fgColor index 1
+bgColor index 8
+value {
+  "Current Demand"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 344
+y 96
+w 144
+h 16
+font "arial-medium-r-12.0"
+fontAlign "center"
+fgColor index 1
+bgColor index 8
+value {
+  "Current Position"
+}
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 24
+y 192
+w 144
+h 40
+controlPv "$(prefix)SERVO-03:1AXISD"
+precision 4
+fgColor index 14
+bgColor index 3
+fill
+font "arial-medium-r-14.0"
+lineWidth 1
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 24
+y 232
+w 144
+h 40
+controlPv "$(prefix)SERVO-04:1AXISD"
+precision 4
+fgColor index 14
+bgColor index 3
+fill
+font "arial-medium-r-14.0"
+lineWidth 1
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 184
+y 200
+w 144
+h 24
+controlPv "$(prefix)SERVO-03:1AXISD"
+precision 4
+fgColor index 16
+fgAlarm
+bgColor index 13
+fill
+font "arial-medium-r-14.0"
+fontAlign "center"
+lineWidth 2
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 184
+y 240
+w 144
+h 24
+controlPv "$(prefix)SERVO-04:1AXISD"
+precision 4
+fgColor index 16
+fgAlarm
+bgColor index 13
+fill
+font "arial-medium-r-14.0"
+fontAlign "center"
+lineWidth 2
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 344
+y 200
+w 144
+h 24
+controlPv "$(prefix)SERVO-$(suff1)3:MOT.RBV"
+precision 4
+fgColor index 16
+fgAlarm
+bgColor index 13
+fill
+font "arial-medium-r-14.0"
+fontAlign "center"
+lineWidth 2
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 344
+y 240
+w 144
+h 24
+controlPv "$(prefix)SERVO-$(suff1)4:MOT.RBV"
+precision 4
+fgColor index 16
+fgAlarm
+bgColor index 13
+fill
+font "arial-medium-r-14.0"
+fontAlign "center"
+lineWidth 2
+endObjectProperties
+
