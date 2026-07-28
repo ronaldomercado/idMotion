@@ -4,8 +4,10 @@
 # [ 1] Pause
 # [ 2] Move
 # [ 3] Go
-# % gui, $(name), edm, IDM_defer.edl
+# % macro, name, gui component name
 # % macro, prefix, pv prefix e.g. TS02K-MO-
+
+# % gui, $(name), edm, IDM_defer.edl
 
 record(mbbo, "$(prefix)SERVC-01:DEFER") {
   field(ZRVL, "0")
