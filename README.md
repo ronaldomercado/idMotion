@@ -10,7 +10,7 @@ because insertionDevice assumes the PLC will use the FINS protocol.
 Gap demand records
 
 | PV                            | purpose                            |
-|-------------------------------+------------------------------------|
+|-------------------------------|------------------------------------|
 | TS02K-MO-SERVC-01:GAPD        | Demand for gap move                |
 | TS02K-MO-SERVC-01:GAPSET.PROC | Execute move by writing to this PV |
 |                               |                                    |
