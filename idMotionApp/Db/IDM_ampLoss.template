@@ -1,0 +1,43 @@
+# Records to send commands to
+# recover from amplifier loss
+#
+# There are 3 records are to send
+#  $$$
+#  #1..4out0
+#  #1..4k
+
+record(stringout, "$(prefix):AMPL01")
+{
+    field(DESC, "Send reset to pmac")
+    field(DTYP, "asynOctetWrite")
+    field(OUT,  "@asyn($(port),0,1)PMAC_C_WRITE_CMD")
+    field(SCAN, "Passive")
+    field(VAL,  "$$$")
+}
+
+record(stringout, "$(prefix):AMPL02")
+{
+    field(DESC, "Send output zero")
+    field(DTYP, "asynOctetWrite")
+    field(OUT,  "@asyn($(port),0,1)PMAC_C_WRITE_CMD")
+    field(SCAN, "Passive")
+    field(VAL,  "#1..4out0")
+}
+
+record(stringout, "$(prefix):"AMPL03)
+{
+    field(DESC, "Send kill request")
+    field(DTYP, "asynOctetWrite")
+    field(OUT,  "@asyn($(port),0,1)PMAC_C_WRITE_CMD")
+    field(SCAN, "Passive")
+    field(VAL,  "#1..4k")
+}
+
+# record(seq, "$(prefix):SEQAMPL")
+# {
+#     field(DESC, "Sequence amplifier loss commands")
+#     field(SCAN, "Passive")
+#     field(DLY1, "0.0")
+#     field(DO1,
+#     ## missing - investigate what is sent from the graphics screen
+# }

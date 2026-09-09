@@ -8,7 +8,7 @@ DB += IDM_gap.template
 DB += IDM_single.template
 DB += IDM_posok.template
 DB += IDM_stop.template
-
+DB += IDM_ampLoss.template
 
 #USES_TEMPLATE += $(MOTOR)/db/motor.template
 #USES_TEMPLATE += $(MOTOR)/db/basic_motor.template
