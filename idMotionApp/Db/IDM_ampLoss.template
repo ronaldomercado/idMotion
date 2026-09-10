@@ -24,7 +24,7 @@ record(stringout, "$(prefix):AMPL02")
     field(VAL,  "#1..4out0")
 }
 
-record(stringout, "$(prefix):"AMPL03)
+record(stringout, "$(prefix):AMPL03")
 {
     field(DESC, "Send kill request")
     field(DTYP, "asynOctetWrite")
